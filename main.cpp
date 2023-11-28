@@ -57,7 +57,7 @@ void testNetwork(Network& myNetwork, Processor& testImages, Processor& testLabel
         correct += myNetwork.isCorrect();
         drawImage(m, testImages, testLabels);
         cout << endl << "Machines Answer : " << myNetwork.getAnswer() << endl;
-        cout << endl << "Accumulated Accuracy : " << 100 * ((correct) / (m + 1)) << "% " << endl;
+        cout << endl << "Accumulated Accuracy : " << 100 * ((float)(correct) / (m + 1)) << "% " << endl;
         sleep_until(system_clock::now() + seconds(2));
     }
 }
